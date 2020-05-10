@@ -6,9 +6,9 @@ const { Room } = require('../../../../models');
 router.get('/', asyncHandler(async (req, res) => {
     const rooms = await Room.findAll();
 
-    res.send({
-        data: rooms
-    })
+    res.send(
+        rooms
+    )
 }));
 
 router.post('/', asyncHandler(async (req, res) => {

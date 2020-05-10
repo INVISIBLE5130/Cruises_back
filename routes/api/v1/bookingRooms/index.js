@@ -6,9 +6,9 @@ const {BookingRoom} = require('../../../../models');
 router.get('/', asyncHandler(async (req, res) => {
     const bookingrooms = await BookingRoom.findAll();
 
-    res.send({
-        data: bookingrooms
-    })
+    res.send(
+        bookingrooms
+    )
 }));
 
 router.post('/', asyncHandler(async (req, res) => {

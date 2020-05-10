@@ -6,9 +6,9 @@ const { Passenger } = require('../../../../models');
 router.get('/', asyncHandler(async (req, res) => {
     const passengers = await Passenger.findAll();
 
-    res.send({
-        data: passengers
-    })
+    res.send(
+        passengers
+    )
 }));
 
 router.get('/:p1/:p2', asyncHandler(async (req, res) => {

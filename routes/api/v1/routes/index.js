@@ -6,9 +6,9 @@ const { Route } = require('../../../../models');
 router.get('/', asyncHandler(async (req, res) => {
     const routes = await Route.findAll();
 
-    res.send({
-        data: routes
-    })
+    res.send(
+        routes
+    )
 }));
 
 router.post('/', asyncHandler(async (req, res) => {

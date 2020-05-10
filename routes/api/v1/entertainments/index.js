@@ -6,9 +6,9 @@ const { Entertainment } = require('../../../../models');
 router.get('/', asyncHandler(async (req, res) => {
     const entertainments = await Entertainment.findAll();
 
-    res.send({
-        data: entertainments
-    })
+    res.send(
+        entertainments
+    )
 }));
 
 router.post('/', asyncHandler(async (req, res) => {

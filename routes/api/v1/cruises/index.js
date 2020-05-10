@@ -6,9 +6,9 @@ const { Cruise } = require('../../../../models');
 router.get('/', asyncHandler(async (req, res) => {
     const cruises = await Cruise.findAll();
 
-    res.send({
-        data: cruises
-    })
+    res.send(
+        cruises
+    )
 }));
 
 router.post('/', asyncHandler(async (req, res) => {

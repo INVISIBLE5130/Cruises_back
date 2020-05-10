@@ -6,9 +6,9 @@ const { Deck } = require('../../../../models');
 router.get('/', asyncHandler(async (req, res) => {
     const desks = await Deck.findAll();
 
-    res.send({
-        data: desks
-    })
+    res.send(
+        desks
+    )
 }));
 
 router.post('/', asyncHandler(async (req, res) => {
